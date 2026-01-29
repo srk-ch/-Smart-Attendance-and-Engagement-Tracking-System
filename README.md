@@ -121,7 +121,6 @@ It combines **computer vision + ML + real-time dashboards** to provide actionabl
 * Long-term engagement trend analytics
 * Privacy-first (client-side only) mode
 * LMS integration (Canvas, Moodle, etc.)
-
 bright-presence/
 ├── backend/
 │   ├── main.py                 # FastAPI entry point
@@ -149,12 +148,6 @@ bright-presence/
 ## 🧠 Idea 2
 
 ## **CollabVibe: Smart Attendance & Engagement Tracking System**
-
-![Image](https://i.sstatic.net/DQkoi.png)
-
-![Image](https://christophergs.com/assets/images/ultimate-fastapi-tut-pt-12/react-fastapi-architecture.png)
-
-![Image](https://assets.cureusjournals.com/artifacts/upload/figure/file/461/lightbox_ebde1a102d5b11ef80956fb83edd7b3d-figure1.png)
 
 **CollabVibe** is the **final unified implementation**, combining the strongest ideas from EngagePredict and BrightPresence into a **production-ready, modular platform**.
 
