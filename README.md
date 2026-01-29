@@ -1,7 +1,7 @@
-Idea 1.0: 
-Drive link: 
-#Enagage Predict: Smart Attendance and Engagement Tracking System
-# Fortex VS
+## Idea 1.0: 
+## Drive link: 
+## Enagage Predict: Smart Attendance and Engagement Tracking System
+## Fortex VS
 
 Welcome to the Fortex VS project! This repository contains the source code and resources for the Fortex VS application, which is designed to provide advanced engagement prediction and analysis using computer vision and machine learning.
 
@@ -89,7 +89,110 @@ fortex-vs/
 ├── setup.sh
 └── README.md
 
-Idea 2:
+## Idea 1.1:
+## Drive link:
+#Bright Presence:Smart Attendance and Engagement Tracking System
+# BrightPresence Prototype Report
+
+## 1. Executive Summary
+**BrightPresence** is an AI-powered classroom engagement and attendance tracking system designed to enhance the learning experience in real-time. By leveraging computer vision and machine learning, the system monitors student attention, emotion, and gaze direction, providing actionable insights to teachers and timely "nudges" to students to regain their focus.
+
+## 2. Key Features
+
+### For Teachers
+- **Automated Attendance**: Eliminates manual roll calls using facial recognition technology during active sessions.
+- **Real-time Surveillance Dashboard**: View live engagement metrics for the entire class.
+- **Session Management**: Easily start and end class sessions with a single click.
+- **Engagement Reports**: Generate detailed reports at the end of each session, summarizing student attendance and average active scores.
+- **Classroom Status**: Instant overview of which students are present, absent, or flagged for low engagement.
+
+### For Students
+- **Real-time Feedback**: Visual indicators of their own engagement levels (Attention, Gaze, Emotion).
+- **Smart Nudges**: Automated interventions (e.g., "Wake Up! Quick Poll") when attention drops below a critical threshold.
+- **Secure Portal**: Individual login with face authentication integration.
+
+## 3. Technical Architecture
+
+The prototype follows a modern client-server architecture with real-time bidirectional communication.
+
+### Backend (`/backend`)
+- **Framework**: [FastAPI](https://fastapi.tiangolo.com/) (Python) for high-performance Async I/O.
+- **Computer Vision Pipeline**:
+    - **OpenCV & MediaPipe**: For real-time face detection and gaze tracking.
+    - **DeepFace**: For emotion analysis and facial verification.
+    - **Scikit-learn**: For predictive modeling of engagement scores.
+- **Database**: SQLite with SQLAlchemy ORM for managing users, sessions, and engagement logs.
+- **Real-time Communication**: WebSockets (`/ws/vision/{id}`, `/ws/surveillance`) for streaming analysis data.
+
+### Frontend (`/frontend`)
+- **Framework**: React.js with Vite for fast development and build.
+- **Styling**: Tailwind CSS for a responsive and modern UI.
+- **State Management**: React Hooks for managing session state and WebSocket connections.
+- **Components**:
+    - `TeacherDashboard.jsx`: The control center for instructors.
+    - `StudentDashboard.jsx`: The engagement monitor for learners.
+    - `Login/Register`: separate flows for students (with photo upload) and teachers.
+
+## 4. Workflows
+
+### Session Flow
+1. **Teacher Login**: Authenticates and lands on the dashboard.
+2. **Start Session**: Teacher initiates a session, which activates the tracking system.
+3. **Student Login**: Students log in and grant camera permissions.
+4. **Monitoring**:
+    - Student video feed is analyzed locally or sent frame-by-frame to the backend via WebSocket.
+    - Backend processes frames to extract Attention Score, Emotion, and Gaze.
+    - Data is streamed back to the student (for self-correction) and the teacher (for surveillance).
+5. **Intervention**: If a student's score drops, a "Nudge" is triggered.
+6. **End Session**: Teacher stops the session; a summary report is generated and saved.
+
+## 5. Setup & Installation
+
+### Prerequisites
+- Python 3.8+
+- Node.js & npm
+
+### Backend Setup
+```bash
+cd bright-presence
+pip install -r requirements.txt
+uvicorn backend.main:app --reload
+```
+*Runs on http://localhost:8000*
+
+### Frontend Setup
+```bash
+cd bright-presence/frontend
+npm install
+npm run dev
+```
+*Runs on http://localhost:5173 (typically)*
+
+## 6. Project Structure
+```
+bright-presence/
+├── backend/
+│   ├── main.py             # Entry point, API routes, WebSocket handlers
+│   ├── models.py           # Database schema (Users, Sessions, Logs)
+│   ├── services/           # Business logic modules
+│   │   ├── vision_engine.py    # Core logic for image processing & analysis
+│   │   └── ...
+│   └── ...
+├── frontend/
+│   ├── src/
+│   │   ├── pages/          # Dashboard and Auth views
+│   │   └── ...
+│   └── ...
+└── requirements.txt        # Python dependencies
+```
+
+## 7. Future Roadmap
+- **Advanced Analytics**: Long-term trend analysis for student performance.
+- **Privacy Mode**: fully client-side processing to reduce bandwidth and privacy concerns.
+- **LMS Integration**: Sync attendance directly with platforms like Canvas or Moodle.
+
+
+## Idea 2:
 Drive link:https://drive.google.com/file/d/1EIpiB3aRBeSBuBJz6c2NSfpDSuTgWt1j/view?usp=sharing
 This drive link has the whole environment included all u need is to run start.bat in the terminal and you are good to go for lauching it
 # CollabVibe: Smart Attendance and Engagement Tracking System
