@@ -1,3 +1,97 @@
+Idea 1.0: 
+Drive link: 
+#Enagage Predict: Smart Attendance and Engagement Tracking System
+# Fortex VS
+
+Welcome to the Fortex VS project! This repository contains the source code and resources for the Fortex VS application, which is designed to provide advanced engagement prediction and analysis using computer vision and machine learning.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Advanced engagement prediction using machine learning models.
+- Real-time camera-based emotion tracking.
+- Comprehensive deployment guides for production readiness.
+- Backend API for integration with other systems.
+- Frontend interface for user interaction.
+- Dockerized setup for easy deployment.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/fortex-vs.git
+   cd fortex-vs
+   ```
+
+2. Set up the virtual environment:
+
+   ```powershell
+   python -m venv .venv
+   & .venv\Scripts\Activate.ps1
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r backend/requirements.txt
+   npm install --prefix frontend
+   ```
+
+4. Start the backend server:
+
+   ```bash
+   python backend/app.py
+   ```
+
+5. Start the frontend application:
+
+   ```bash
+   npm start --prefix frontend
+   ```
+
+## Usage
+
+1. Ensure the backend server and frontend application are running.
+2. Access the application in your web browser at `http://localhost:3000`.
+3. Follow the on-screen instructions to use the engagement prediction and analysis features.
+
+## Project Structure
+
+```
+fortex-vs/
+├── backend/
+│   ├── advanced_endpoints.py
+│   ├── advanced_model.py
+│   ├── app.py
+│   ├── config.py
+│   ├── database.py
+│   ├── requirements.txt
+│   └── ...
+├── frontend/
+│   ├── App.css
+│   ├── index.css
+│   ├── index.jsx
+│   ├── package.json
+│   └── ...
+├── docker-compose.yml
+├── setup.ps1
+├── setup.sh
+└── README.md
+
+Idea 2:
+Drive link:https://drive.google.com/file/d/1EIpiB3aRBeSBuBJz6c2NSfpDSuTgWt1j/view?usp=sharing
+This drive link has the whole environment included all u need is to run start.bat in the terminal and you are good to go for lauching it
 # CollabVibe: Smart Attendance and Engagement Tracking System
 
 ## Overview
@@ -102,4 +196,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 **Developed for FORTEX National Hackathon**
 
-**Submitted in partial fulfilment of the Summer Internship Course**
+
